@@ -1,7 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 .App {
   text-align: center;
   background: url('./assets/svgs/bg-1.svg');
+  background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
   min-height: 100vh;
+  font-family: 'Poppins', sans-serif !important; 
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-Container{
+  max-width: 1300px;
+  width: 100%;
 }
 
 .App-logo {
@@ -37,4 +52,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.main-object{
+  background: rgba(255, 255, 255, 0.4);
+backdrop-filter: blur(8px);
 }

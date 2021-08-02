@@ -7,13 +7,13 @@ const Index = () => {
     <HStack
       justifyContent="flex-end"
       alignItems="center"
-      padding="1.5rem"
+      py="2.5rem"
       w="100%"
       spacing="10"
     >
-      <SMLink size="xs">About Me</SMLink>
-      <SMLink size="xs">Portfolio</SMLink>
-      <SMLink size="xs">Contact</SMLink>
+      <SMLink size="sm">About Me</SMLink>
+      <SMLink size="sm">Portfolio</SMLink>
+      <SMLink size="sm">Contact</SMLink>
       <SMButton type="outlined">Connect with me</SMButton>
     </HStack>
   );

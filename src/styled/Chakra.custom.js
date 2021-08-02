@@ -5,28 +5,40 @@ const SMLink = ({ size, children }) => {
   let linkStyle = {};
   return (
     <Link sx={linkStyle}>
-      <Text size={size}>{children}</Text>
+      <Text fontSize={size}>{children}</Text>
     </Link>
   );
 };
 
-const SMButton = ({ type, children }) => {
+const SMButton = ({ type, children }, props) => {
   let buttonStyle = {
     shadow: "sm",
-    rounded: "lg",
-    bg: "white",
     padding: "1rem",
-    border: "1px solid #8093BF",
+    border: "1px solid #ABC4FF",
   };
 
   if (type === "outlined") {
     return (
-      <Button bg="primary" size="xs" sx={buttonStyle}>
-        {children}
+      <Button size="xs" bg="transparent" sx={buttonStyle}>
+        <Text fontSize="md" fontWeight="300">
+          {children}
+        </Text>
       </Button>
     );
   } else {
-    return <Button size="xs">{children}</Button>;
+    return (
+      <Button
+        variant="solid"
+        bg="primary"
+        size="xs"
+        sx={buttonStyle}
+        {...props}
+      >
+        <Text fontSize="md" fontWeight="300">
+          {children}
+        </Text>
+      </Button>
+    );
   }
 };
 

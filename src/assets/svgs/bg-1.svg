@@ -1,5 +1,43 @@
 <svg width="1920" height="1393" viewBox="0 0 1920 1393" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="1920" height="1393" fill="url(#paint0_linear)"/>
+<circle cx="149" cy="140" r="53" fill="#ABC4FF"/>
+<circle cx="288" cy="399" r="4" fill="#ABC4FF"/>
+<circle cx="320" cy="399" r="4" fill="#ABC4FF"/>
+<circle cx="353" cy="399" r="4" fill="#ABC4FF"/>
+<circle cx="288" cy="432" r="4" fill="#ABC4FF"/>
+<circle cx="320" cy="432" r="4" fill="#ABC4FF"/>
+<circle cx="353" cy="432" r="4" fill="#ABC4FF"/>
+<circle cx="288" cy="464" r="4" fill="#ABC4FF"/>
+<circle cx="320" cy="464" r="4" fill="#ABC4FF"/>
+<circle cx="353" cy="464" r="4" fill="#ABC4FF"/>
+<circle cx="385" cy="399" r="4" fill="#ABC4FF"/>
+<circle cx="418" cy="399" r="4" fill="#ABC4FF"/>
+<circle cx="450" cy="399" r="4" fill="#ABC4FF"/>
+<circle cx="385" cy="432" r="4" fill="#ABC4FF"/>
+<circle cx="418" cy="432" r="4" fill="#ABC4FF"/>
+<circle cx="450" cy="432" r="4" fill="#ABC4FF"/>
+<circle cx="385" cy="464" r="4" fill="#ABC4FF"/>
+<circle cx="418" cy="464" r="4" fill="#ABC4FF"/>
+<circle cx="450" cy="464" r="4" fill="#ABC4FF"/>
+<circle cx="450" cy="302" r="4" fill="#ABC4FF"/>
+<circle cx="450" cy="334" r="4" fill="#ABC4FF"/>
+<circle cx="450" cy="367" r="4" fill="#ABC4FF"/>
+<circle cx="288" cy="302" r="4" fill="#ABC4FF"/>
+<circle cx="320" cy="302" r="4" fill="#ABC4FF"/>
+<circle cx="353" cy="302" r="4" fill="#ABC4FF"/>
+<circle cx="288" cy="334" r="4" fill="#ABC4FF"/>
+<circle cx="320" cy="334" r="4" fill="#ABC4FF"/>
+<circle cx="353" cy="334" r="4" fill="#ABC4FF"/>
+<circle cx="288" cy="367" r="4" fill="#ABC4FF"/>
+<circle cx="320" cy="367" r="4" fill="#ABC4FF"/>
+<circle cx="353" cy="367" r="4" fill="#ABC4FF"/>
+<circle cx="385" cy="302" r="4" fill="#ABC4FF"/>
+<circle cx="418" cy="302" r="4" fill="#ABC4FF"/>
+<circle cx="385" cy="334" r="4" fill="#ABC4FF"/>
+<circle cx="418" cy="334" r="4" fill="#ABC4FF"/>
+<circle cx="385" cy="367" r="4" fill="#ABC4FF"/>
+<circle cx="418" cy="367" r="4" fill="#ABC4FF"/>
+<rect x="237" y="248" width="196" height="196" fill="#C0D3FF" fill-opacity="0.5"/>
 <defs>
 <linearGradient id="paint0_linear" x1="960" y1="0" x2="960" y2="1393" gradientUnits="userSpaceOnUse">
 <stop stop-color="#E2EAFF"/>
