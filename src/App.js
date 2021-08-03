@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
+import Repos from "./components/Repos";
 
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
@@ -22,6 +23,7 @@ function App() {
         <div className="App-Container">
           <Header />
           <Main />
+          <Repos />
         </div>
       </div>
     </ChakraProvider>

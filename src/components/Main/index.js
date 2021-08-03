@@ -12,7 +12,7 @@ const Index = () => {
       alignItems="center"
       position="relative"
       w="100%"
-      h="500px"
+      h="80vh"
     >
       <Image
         position="absolute"
