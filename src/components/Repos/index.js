@@ -77,7 +77,7 @@ const Index = () => {
           <Image w="30" h="30" src={SMIcons.Github} alt="Experience" />
         </Circle>
         <Text fontSize="25" fontWeight="bold">
-          <CountUp start={0} end={18} duration={1} />
+          <CountUp start={0} end={86} duration={1} />
         </Text>
         <Text>Repositories</Text>
       </VStack>
