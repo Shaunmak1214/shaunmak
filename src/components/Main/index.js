@@ -1,10 +1,18 @@
 import { Flex, Text, VStack, Spacer, Image } from "@chakra-ui/react";
 import { SMButton } from "../../styled/Chakra.custom";
-import React from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import React, { useEffect } from "react";
 
 import * as SMIcons from "../../assets";
 
 const Index = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    });
+  }, []);
+
   return (
     <Flex
       flexDir="row"
@@ -20,6 +28,8 @@ const Index = () => {
         top="0px"
         src={SMIcons.BlueCircle}
         zIndex="-2"
+        data-aos={"fade-left"}
+        data-aos-duration={"1000"}
       />
       <Image
         position="absolute"
@@ -28,6 +38,8 @@ const Index = () => {
         w="450px"
         src={SMIcons.GreenCircle}
         zIndex="-2"
+        data-aos={"fade-right"}
+        data-aos-duration={"1000"}
       />
       <VStack
         className="main-object"
@@ -37,6 +49,8 @@ const Index = () => {
         w="300px"
         position="relative"
         zIndex="1"
+        data-aos={"fade-up"}
+        data-aos-duration={"1500"}
       >
         <Text fontSize="3xl" as="h1" fontWeight="700">
           I'm Shaun Mak

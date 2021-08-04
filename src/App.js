@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Repos from "./components/Repos";
+import Projects from "./components/Projects";
 
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
@@ -24,6 +25,7 @@ function App() {
           <Header />
           <Main />
           <Repos />
+          <Projects />
         </div>
       </div>
     </ChakraProvider>
