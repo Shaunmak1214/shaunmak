@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Repos from "./components/Repos";
 import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 import { ChakraProvider } from "@chakra-ui/react";
 import { extendTheme } from "@chakra-ui/react";
@@ -10,6 +11,7 @@ import { extendTheme } from "@chakra-ui/react";
 const theme = extendTheme({
   colors: {
     primary: "#ABC4FF",
+    accent: "#F2F6FF",
     secondary: "#D9F3F0",
     highlight: "#00C9A7",
     warning: "#FFC75F",
@@ -27,6 +29,7 @@ function App() {
           <Repos />
           <Projects />
         </div>
+        <Footer />
       </div>
     </ChakraProvider>
   );

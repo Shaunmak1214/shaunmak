@@ -25,6 +25,14 @@ const SMButton = ({ type, children }, props) => {
         </Text>
       </Button>
     );
+  } else if (type === "special") {
+    return (
+      <Button bg="#8093BF" color="white" sx={buttonStyle}>
+        <Text px="2rem" fontSize="md" fontWeight="bold">
+          {children}
+        </Text>
+      </Button>
+    );
   } else {
     return (
       <Button
