@@ -6,10 +6,17 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import * as SMIcons from "../../assets";
 
 const Index = () => {
+  useEffect(() => {
+    AOS.init({
+      once: true,
+    });
+  }, []);
   let projectData = [
     {
       name: "SambalSOS",
@@ -39,8 +46,44 @@ const Index = () => {
         "https://res.cloudinary.com/shaun-storage/image/upload/v1628029432/vendingjs-1_wsc8lw.png",
       ],
     },
+    {
+      name: "FlashLives",
+      type: "Web Application",
+      description:
+        "An (Airbnb clone) Hotel, homestay booking webapp written in pure php and implemented Google Oauth, Facebook login Auth, Google maps searches and Machine learning image auto tagging",
+      images: [
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1628278802/flashlives-1_igcw4o.png",
+      ],
+    },
+    {
+      name: "NUA",
+      type: "Mobile Application & Discord Bots",
+      description:
+        "A streamline of services from discord bots to mobile application with a purpose of delivering latest space related news to users",
+      images: [
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1628278801/nua-1_z4ojh0.png",
+      ],
+    },
+    {
+      name: "DSC Kita Hack 2021 Website",
+      type: "Static Website",
+      description:
+        "Static website that serves the purpose of promoting the event and handling registrations",
+      images: [
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1628278801/dsc-1_v9yk6r.png",
+      ],
+    },
+    {
+      name: "Tech Career Days 2020/21",
+      type: "Web Application",
+      description:
+        "A website to promote Tech Career Days 2021 alongside with a webapp built for companies to accept, reject, star submitted resumes",
+      images: [
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1628278801/tcd-1_gfk9pr.png",
+      ],
+    },
   ];
-  const ProjectCards = ({ name, type, images, description }) => {
+  const ProjectCards = ({ name, type, images, description, aosDelay }) => {
     let projectCartStyle = {
       background: "rgba(255, 255, 255, 0.5)",
       boxShadow: "0px 16px 49px rgba(197, 197, 197, 0.25)",
@@ -61,6 +104,9 @@ const Index = () => {
         justifySelf="center"
         cursor="pointer"
         sx={projectCartStyle}
+        data-aos={"fade-up"}
+        data-aos-duration={"1500"}
+        data-aos-delay={aosDelay}
       >
         <Flex w="100%" sx={projectCartTopBarStyle}>
           <Text>{type}</Text>
@@ -77,7 +123,7 @@ const Index = () => {
               <Image
                 key={index}
                 src={image}
-                height="100%"
+                height="80%"
                 width="auto"
                 rounded="xl"
               />
@@ -111,6 +157,7 @@ const Index = () => {
           type={project.type}
           images={project.images}
           description={project.description}
+          aos-delay={index * 100}
           key={index}
         />
       );
@@ -119,7 +166,7 @@ const Index = () => {
 
   return (
     <Flex flexDir="column" alignItems="center" mt="100">
-      <Text fontSize="25" fontWeight="bold" color="#606060">
+      <Text fontSize="35" fontWeight="bold" color="#000000">
         Notable Projects
       </Text>
       <SimpleGrid spacing="10" mt="100" w="100%" columns={[1, null, 2]}>

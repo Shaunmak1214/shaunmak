@@ -17,6 +17,20 @@ const theme = extendTheme({
     warning: "#FFC75F",
     danger: "#C34A36",
   },
+  components: {
+    Button: {
+      variants: {
+        solid() {
+          return {
+            _hover: {
+              bg: `#BBC7E4`,
+            },
+            _active: { bg: `#BBC7E4` },
+          };
+        },
+      },
+    },
+  },
 });
 
 function App() {
