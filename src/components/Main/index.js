@@ -24,8 +24,9 @@ const Index = () => {
     >
       <Image
         position="absolute"
-        left="600px"
-        top="0px"
+        left={["200px", null, "600px"]}
+        w={["150px", null, "300px"]}
+        top={["100px", null, "0px"]}
         src={SMIcons.BlueCircle}
         zIndex="-2"
         data-aos={"fade-left"}
@@ -33,9 +34,9 @@ const Index = () => {
       />
       <Image
         position="absolute"
-        left="250px"
-        top="100px"
-        w="450px"
+        left={["25px", null, "250px"]}
+        top={["325px", null, "100px"]}
+        w={["100px", null, "450px"]}
         src={SMIcons.GreenCircle}
         zIndex="-2"
         data-aos={"fade-right"}

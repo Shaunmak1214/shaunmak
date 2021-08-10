@@ -24,7 +24,13 @@ const Index = () => {
   }, []);
 
   return (
-    <SimpleGrid spacing="20" mt="100" w="100%" columns={[1, null, 3]}>
+    <SimpleGrid
+      spacing="20"
+      mt={["0", null, "100"]}
+      w="100%"
+      columns={[1, null, 3]}
+      padding={["1rem", null, "0rem"]}
+    >
       <VStack
         data-aos={"fade-up"}
         data-aos-duration={"1500"}

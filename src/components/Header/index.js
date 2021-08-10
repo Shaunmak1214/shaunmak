@@ -10,10 +10,9 @@ const Index = () => {
       py="2.5rem"
       w="100%"
       spacing="10"
+      px="1rem"
     >
-      <SMLink size="sm">About Me</SMLink>
       <SMLink size="sm">Portfolio</SMLink>
-      <SMLink size="sm">Contact</SMLink>
       <SMButton type="outlined">Connect with me</SMButton>
     </HStack>
   );

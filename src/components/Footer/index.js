@@ -64,8 +64,11 @@ const Index = () => {
           alignItems="center"
           w="100%"
           maxW="container.xl"
+          flexDir={["column", null, "row"]}
         >
-          <Text fontSize="xl">Wan't to know more about me?</Text>
+          <Text fontSize="xl" mb={["3", null, "0"]}>
+            Wan't to know more about me?
+          </Text>
           <SMButton type="special">Reach me</SMButton>
         </Flex>
       </Flex>
@@ -74,18 +77,21 @@ const Index = () => {
         justifyContent="space-between"
         alignItems="center"
         maxW="container.xl"
-        py="1rem"
+        p="1rem"
+        flexDir={["column", null, "row"]}
       >
         <Text
-          textAlign="left"
+          textAlign={["center", null, "left"]}
           w="100%"
           fontSize="sm"
           fontWeight="300"
           color="#797979"
+          mt={["3", null, "0"]}
+          mb={["3", null, "0"]}
         >
-          All Rights Reserved © 2021 | Shaun Mak{" "}
+          All Rights Reserved © 2021 | Shaun Mak
         </Text>
-        <HStack justifyContent="flex-end" w="100%" h="100%">
+        <HStack justifyContent={["center", null, "flex-end"]} w="100%" h="100%">
           <SocialIconsRenderer />
         </HStack>
       </Flex>

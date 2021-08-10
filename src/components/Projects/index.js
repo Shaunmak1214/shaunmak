@@ -83,7 +83,14 @@ const Index = () => {
       ],
     },
   ];
-  const ProjectCards = ({ name, type, images, description, aosDelay }) => {
+  const ProjectCards = ({
+    name,
+    type,
+    images,
+    description,
+    aosDelay,
+    pkey,
+  }) => {
     let projectCartStyle = {
       background: "rgba(255, 255, 255, 0.5)",
       boxShadow: "0px 16px 49px rgba(197, 197, 197, 0.25)",
@@ -96,6 +103,7 @@ const Index = () => {
     };
     return (
       <VStack
+        key={pkey}
         spacing="5"
         p="1.5rem"
         h="100%"
@@ -120,13 +128,15 @@ const Index = () => {
         >
           {images.map((image, index) => {
             return (
-              <Image
-                key={index}
-                src={image}
-                height="80%"
-                width="auto"
-                rounded="xl"
-              />
+              <a className="venobox" href={image} alt={name}>
+                <Image
+                  pkey={index}
+                  src={image}
+                  height={["60%", "70%", "80%"]}
+                  width="auto"
+                  rounded="xl"
+                />
+              </a>
             );
           })}
         </HStack>
@@ -137,7 +147,7 @@ const Index = () => {
           w="100%"
           maxW="100%"
         >
-          <Text fontSize="28" fontWeight="600">
+          <Text textAlign="start" fontSize="28" fontWeight="600">
             {name}
           </Text>
           <Image src={SMIcons.RightArrow} alt="right arrow" />
@@ -169,7 +179,7 @@ const Index = () => {
       <Text fontSize="35" fontWeight="bold" color="#000000">
         Notable Projects
       </Text>
-      <SimpleGrid spacing="10" mt="100" w="100%" columns={[1, null, 2]}>
+      <SimpleGrid spacing="10" mt="50" w="100%" columns={[1, null, 2]}>
         <ProjectCardsRenderer />
       </SimpleGrid>
     </Flex>
