@@ -11,6 +11,20 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import * as SMIcons from "../../assets";
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/swiper.min.css";
+import "swiper/components/pagination/pagination.min.css";
+
+// import Swiper core and required modules
+import SwiperCore, { Pagination } from "swiper/core";
+import "./index.css";
+
+// install Swiper modules
+SwiperCore.use([Pagination]);
+
 const Index = () => {
   useEffect(() => {
     AOS.init({
@@ -126,19 +140,23 @@ const Index = () => {
           maxW="100%"
           h="300px"
         >
-          {images.map((image, index) => {
-            return (
-              <a className="venobox" href={image} alt={name}>
-                <Image
-                  pkey={index}
-                  src={image}
-                  height={["60%", "70%", "80%"]}
-                  width="auto"
-                  rounded="xl"
-                />
-              </a>
-            );
-          })}
+          <Swiper
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            className="mySwiper"
+          >
+            {images.map((image, index) => {
+              return (
+                <SwiperSlide>
+                  <a className="venobox" href={image} alt={name}>
+                    <Image key={index} src={image} rounded="xl" />
+                  </a>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
         </HStack>
 
         <HStack
@@ -168,6 +186,7 @@ const Index = () => {
           images={project.images}
           description={project.description}
           aos-delay={index * 100}
+          pkey={index}
           key={index}
         />
       );
