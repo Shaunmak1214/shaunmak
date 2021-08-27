@@ -10,7 +10,7 @@ const SMLink = ({ size, children }) => {
   );
 };
 
-const SMButton = ({ type, children }, props) => {
+const SMButton = ({ type, children, ...restProps }, props) => {
   let buttonStyle = {
     shadow: "sm",
     padding: "1rem",
@@ -19,7 +19,7 @@ const SMButton = ({ type, children }, props) => {
 
   if (type === "outlined") {
     return (
-      <Button size="xs" bg="transparent" sx={buttonStyle}>
+      <Button {...restProps} size="xs" bg="transparent" sx={buttonStyle}>
         <Text fontSize="md" fontWeight="300">
           {children}
         </Text>
@@ -27,7 +27,7 @@ const SMButton = ({ type, children }, props) => {
     );
   } else if (type === "special") {
     return (
-      <Button bg="#8093BF" color="white" sx={buttonStyle}>
+      <Button {...restProps} bg="#8093BF" color="white" sx={buttonStyle}>
         <Text px="2rem" fontSize="md" fontWeight="bold">
           {children}
         </Text>
@@ -41,6 +41,7 @@ const SMButton = ({ type, children }, props) => {
         size="xs"
         sx={buttonStyle}
         {...props}
+        {...restProps}
       >
         <Text fontSize="md" fontWeight="300">
           {children}

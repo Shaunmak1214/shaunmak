@@ -69,7 +69,14 @@ const Index = () => {
           <Text fontSize="xl" mb={["3", null, "0"]}>
             Wan't to know more about me?
           </Text>
-          <SMButton type="special">Reach me</SMButton>
+          <SMButton
+            onClick={() => {
+              window.location.href = "https://www.linkedin.com/in/yenweimak/";
+            }}
+            type="special"
+          >
+            Reach me
+          </SMButton>
         </Flex>
       </Flex>
       <Flex

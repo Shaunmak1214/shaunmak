@@ -60,7 +60,13 @@ const Index = () => {
           a Full Stack Developer
         </Text>
         <Spacer maxH="15px" />
-        <SMButton type="solid" rounded="full">
+        <SMButton
+          onClick={() => {
+            window.location.href = "https://www.linkedin.com/in/yenweimak/";
+          }}
+          type="solid"
+          rounded="full"
+        >
           Connect with me
         </SMButton>
       </VStack>

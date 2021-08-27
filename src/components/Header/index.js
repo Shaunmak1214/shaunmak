@@ -13,7 +13,14 @@ const Index = () => {
       px="1rem"
     >
       <SMLink size="sm">Portfolio</SMLink>
-      <SMButton type="outlined">Connect with me</SMButton>
+      <SMButton
+        onClick={() => {
+          window.location.href = "https://www.linkedin.com/in/yenweimak/";
+        }}
+        type="outlined"
+      >
+        Connect with me
+      </SMButton>
     </HStack>
   );
 };
