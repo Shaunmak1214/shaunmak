@@ -1,6 +1,6 @@
 import React from "react";
 import { HStack } from "@chakra-ui/react";
-import { SMButton, SMLink } from "../../styled/Chakra.custom";
+import { SMButton } from "../../styled/Chakra.custom";
 
 const Index = () => {
   return (
@@ -12,7 +12,7 @@ const Index = () => {
       spacing="10"
       px="1rem"
     >
-      <SMLink size="sm">Portfolio</SMLink>
+      {/* <SMLink size="sm">Portfolio</SMLink> */}
       <SMButton
         onClick={() => {
           window.location.href = "https://www.linkedin.com/in/yenweimak/";

@@ -41,6 +41,7 @@ const Index = () => {
         "https://res.cloudinary.com/shaun-storage/image/upload/v1628023384/DC449CCC-F237-4FA5-91AC-0EAB36717A80_u88iij.jpg",
         "https://res.cloudinary.com/shaun-storage/image/upload/v1628023384/76D93D42-56B3-4518-81AC-9AF84E709B40_pvu80c.jpg",
       ],
+      link: "https://www.sambalsos.com",
     },
     {
       name: "Common Sans",
@@ -50,6 +51,7 @@ const Index = () => {
       images: [
         "https://res.cloudinary.com/shaun-storage/image/upload/v1628078469/unknown_v4djep.jpg",
       ],
+      link: "#",
     },
     {
       name: "Vending.js",
@@ -59,6 +61,7 @@ const Index = () => {
       images: [
         "https://res.cloudinary.com/shaun-storage/image/upload/v1628029432/vendingjs-1_wsc8lw.png",
       ],
+      link: "#",
     },
     {
       name: "FlashLives",
@@ -68,6 +71,7 @@ const Index = () => {
       images: [
         "https://res.cloudinary.com/shaun-storage/image/upload/v1628278802/flashlives-1_igcw4o.png",
       ],
+      link: "http://flashlives.herokuapp.com/Customer/dashboard/",
     },
     {
       name: "NUA",
@@ -77,6 +81,7 @@ const Index = () => {
       images: [
         "https://res.cloudinary.com/shaun-storage/image/upload/v1628278801/nua-1_z4ojh0.png",
       ],
+      link: "#",
     },
     {
       name: "DSC Kita Hack 2021 Website",
@@ -86,6 +91,7 @@ const Index = () => {
       images: [
         "https://res.cloudinary.com/shaun-storage/image/upload/v1628278801/dsc-1_v9yk6r.png",
       ],
+      link: "https://dscmalaysia.github.io/dsckitahack2021/",
     },
     {
       name: "Tech Career Days 2020/21",
@@ -95,6 +101,7 @@ const Index = () => {
       images: [
         "https://res.cloudinary.com/shaun-storage/image/upload/v1628278801/tcd-1_gfk9pr.png",
       ],
+      link: "https://techcareerdays.com/",
     },
   ];
   const ProjectCards = ({
@@ -102,6 +109,7 @@ const Index = () => {
     type,
     images,
     description,
+    link,
     aosDelay,
     pkey,
   }) => {
@@ -168,7 +176,13 @@ const Index = () => {
           <Text textAlign="start" fontSize="28" fontWeight="600">
             {name}
           </Text>
-          <Image src={SMIcons.RightArrow} alt="right arrow" />
+          <Image
+            onClick={() => {
+              window.location.href = link;
+            }}
+            src={SMIcons.RightArrow}
+            alt="right arrow"
+          />
         </HStack>
         <Text textAlign="left" color="#797979">
           {description}
@@ -185,6 +199,7 @@ const Index = () => {
           type={project.type}
           images={project.images}
           description={project.description}
+          link={project.link}
           aos-delay={index * 100}
           pkey={index}
           key={index}

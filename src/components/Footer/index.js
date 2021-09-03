@@ -84,7 +84,7 @@ const Index = () => {
         justifyContent="space-between"
         alignItems="center"
         maxW="container.xl"
-        p="1rem"
+        py="1rem"
         flexDir={["column", null, "row"]}
       >
         <Text
