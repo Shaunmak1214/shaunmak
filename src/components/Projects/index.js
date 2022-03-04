@@ -5,11 +5,13 @@ import {
   SimpleGrid,
   Text,
   VStack,
+  IconButton,
 } from "@chakra-ui/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import * as SMIcons from "../../assets";
+import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,13 +21,17 @@ import "swiper/swiper.min.css";
 import "swiper/components/pagination/pagination.min.css";
 
 // import Swiper core and required modules
-import SwiperCore, { Pagination } from "swiper/core";
+import SwiperCore, { Pagination, Navigation } from "swiper/core";
 import "./index.css";
 
 // install Swiper modules
 SwiperCore.use([Pagination]);
+SwiperCore.use([Navigation]);
 
 const Index = () => {
+  const navigationPrevRef = useRef(null);
+  const navigationNextRef = useRef(null);
+
   useEffect(() => {
     AOS.init({
       once: true,
@@ -33,37 +39,52 @@ const Index = () => {
   }, []);
   let projectData = [
     {
-      name: "Tech Career Days Resume Portal",
-      type: "Web Application / Microservices",
+      name: "Tech Career Days 2022 Resume Portal",
+      type: "Web Application / Express API",
       description:
-        "SambalSOS is a web application that allows users to create and share geospatial data in the form of web services.",
+        "Tech Career Days 2022 is an annual two-day tech job fair organized by IT Society MMU Cyberjaya. ",
       images: [
-        "https://res.cloudinary.com/shaun-storage/image/upload/v1628023384/DC449CCC-F237-4FA5-91AC-0EAB36717A80_u88iij.jpg",
-        "https://res.cloudinary.com/shaun-storage/image/upload/v1628023384/76D93D42-56B3-4518-81AC-9AF84E709B40_pvu80c.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435792/Image_05-03-2022_at_7.12_AM_vqhwhu.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435792/Image_05-03-2022_at_7.13_AM_myxdt9.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435792/Image_05-03-2022_at_7.13_AM_1_cntas6.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435792/Image_05-03-2022_at_7.14_AM_aucdn4.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435792/Image_05-03-2022_at_7.13_AM_2_zsj7wm.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435793/Image_05-03-2022_at_7.15_AM_i4ubkk.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435793/Image_05-03-2022_at_7.15_AM_1_kg8e1n.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435793/Image_05-03-2022_at_7.15_AM_2_uozcwu.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435792/Image_05-03-2022_at_7.13_AM_3_s9lku0.jpg",
       ],
-      link: "https://www.sambalsos.com",
+      link: "https://www.techcareerdays.com",
     },
     {
       name: "Codenection 2021",
       type: "Web Application / Microservices",
       description:
-        "SambalSOS is a web application that allows users to create and share geospatial data in the form of web services.",
+        "CodeNection 2021 is a programming-focused event organized by IT Society MMU Cyberjaya that includes a series of algorithm workshops and hackathons.",
       images: [
-        "https://res.cloudinary.com/shaun-storage/image/upload/v1628023384/DC449CCC-F237-4FA5-91AC-0EAB36717A80_u88iij.jpg",
-        "https://res.cloudinary.com/shaun-storage/image/upload/v1628023384/76D93D42-56B3-4518-81AC-9AF84E709B40_pvu80c.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435380/Image_05-03-2022_at_6.57_AM_vhkdei.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435379/Image_05-03-2022_at_7.03_AM_syv2qq.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435380/Image_05-03-2022_at_7.00_AM_liwkl4.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435379/Image_05-03-2022_at_7.01_AM_nprbbo.jpg",
       ],
-      link: "https://www.sambalsos.com",
+      link: "https://www.itscodenection.com",
     },
     {
       name: "Barcamp 2021",
       type: "Web Application / Express API",
       description:
-        "SambalSOS is a web application that allows users to create and share geospatial data in the form of web services.",
+        "BarCamp Cyberjaya is an annual user-generated unconference with topics surrounding technology and entrepreneurship.",
       images: [
-        "https://res.cloudinary.com/shaun-storage/image/upload/v1628023384/DC449CCC-F237-4FA5-91AC-0EAB36717A80_u88iij.jpg",
-        "https://res.cloudinary.com/shaun-storage/image/upload/v1628023384/76D93D42-56B3-4518-81AC-9AF84E709B40_pvu80c.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435389/Image_05-03-2022_at_7.03_AM_1_srapmw.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435389/Image_05-03-2022_at_7.04_AM_j1bbxi.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435389/Image_05-03-2022_at_7.06_AM_voh5n6.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435388/Image_05-03-2022_at_7.06_AM_1_peqncv.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435388/Image_05-03-2022_at_7.06_AM_2_kb1fvh.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435389/Image_05-03-2022_at_7.06_AM_3_qpglke.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435389/Image_05-03-2022_at_7.07_AM_inknxq.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1646435389/Image_05-03-2022_at_7.07_AM_1_esqjyr.jpg",
       ],
-      link: "https://www.sambalsos.com",
+      link: "https://www.barcampcyberjaya.com",
     },
     {
       name: "SambalSOS",
@@ -75,6 +96,17 @@ const Index = () => {
         "https://res.cloudinary.com/shaun-storage/image/upload/v1628023384/76D93D42-56B3-4518-81AC-9AF84E709B40_pvu80c.jpg",
       ],
       link: "https://www.sambalsos.com",
+    },
+    {
+      name: "Customeet",
+      type: "Chrome Extension",
+      description:
+        "This extension helps you customize your google meet in your own way ! In this extension, we provide a solution for users to customize the look and feel on their google meets.",
+      images: [
+        "https://lh3.googleusercontent.com/6F2mqRayTYxo4ha-xcmFr3RFCWijbWO1VXkq8bwjkB-XTjr9jBeU6T3ue3pqbw8VVuUPqGk_m841w6GiaMmJQfhYRg=w640-h400-e365-rj-sc0x00ffffff",
+        "https://lh3.googleusercontent.com/O5FkaZaUN3PCL_NX3SjVVblkQJtdTnaH55QxiXcBlWhoqyQmxQgRFCYDknY0YsRB_vo2LR8JcfmqK4-HYd79ONONYA=w640-h400-e365-rj-sc0x00ffffff",
+      ],
+      link: "https://chrome.google.com/webstore/detail/customeet/mnhmiianlmpgpmallbgfeklmoenjljbm",
     },
     {
       name: "Common Sans",
@@ -182,21 +214,74 @@ const Index = () => {
           h="300px"
         >
           <Swiper
+            autoplay={true}
+            navigation={{
+              prevEl: navigationPrevRef.current,
+              nextEl: navigationNextRef.current,
+            }}
+            onBeforeInit={(swiper) => {
+              // @ts-ignore
+              swiper.params.navigation.prevEl = navigationPrevRef.current;
+              // @ts-ignore
+              swiper.params.navigation.nextEl = navigationNextRef.current;
+            }}
             spaceBetween={30}
             pagination={{
               clickable: true,
             }}
             className="mySwiper"
+            style={{
+              position: "relative",
+            }}
           >
             {images.map((image, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <a className="venobox" href={image} alt={name}>
+                  <a
+                    className="venobox"
+                    href={image}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    alt={name}
+                  >
                     <Image key={index} src={image} rounded="xl" />
                   </a>
                 </SwiperSlide>
               );
             })}
+
+            <IconButton
+              size={"sm"}
+              ref={navigationPrevRef}
+              aria-label="Prev Slide"
+              icon={<ChevronLeftIcon />}
+              style={{
+                position: "absolute",
+                top: "50%",
+                transform: "translateY(-50%)",
+                left: "10px",
+                zIndex: 1001,
+                backgroundColor: "#ffffff",
+                borderRadius: "50%",
+                boxShadow: "0px 0px 10px #e9e9e9",
+              }}
+            />
+            <IconButton
+              size={"sm"}
+              ref={navigationNextRef}
+              aria-label="Next Slide"
+              icon={<ChevronRightIcon />}
+              style={{
+                position: "absolute",
+                top: "50%",
+                transform: "translateY(-50%)",
+                right: "25px",
+                zIndex: 1001,
+                backgroundColor: "#ffffff",
+                borderRadius: "50%",
+                boxShadow: "0px 0px 10px #e9e9e9",
+              }}
+            />
           </Swiper>
         </HStack>
 

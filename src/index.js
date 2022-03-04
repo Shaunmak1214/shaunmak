@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import ReactGA from "react-ga";
 
-ReactGA.initialize("UA-176777172-1");
+ReactGA.initialize("UA-222073623-1", { debug: true });
 
 ReactDOM.render(
   <React.StrictMode>
