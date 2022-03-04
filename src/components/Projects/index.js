@@ -33,6 +33,39 @@ const Index = () => {
   }, []);
   let projectData = [
     {
+      name: "Tech Career Days Resume Portal",
+      type: "Web Application / Microservices",
+      description:
+        "SambalSOS is a web application that allows users to create and share geospatial data in the form of web services.",
+      images: [
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1628023384/DC449CCC-F237-4FA5-91AC-0EAB36717A80_u88iij.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1628023384/76D93D42-56B3-4518-81AC-9AF84E709B40_pvu80c.jpg",
+      ],
+      link: "https://www.sambalsos.com",
+    },
+    {
+      name: "Codenection 2021",
+      type: "Web Application / Microservices",
+      description:
+        "SambalSOS is a web application that allows users to create and share geospatial data in the form of web services.",
+      images: [
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1628023384/DC449CCC-F237-4FA5-91AC-0EAB36717A80_u88iij.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1628023384/76D93D42-56B3-4518-81AC-9AF84E709B40_pvu80c.jpg",
+      ],
+      link: "https://www.sambalsos.com",
+    },
+    {
+      name: "Barcamp 2021",
+      type: "Web Application / Express API",
+      description:
+        "SambalSOS is a web application that allows users to create and share geospatial data in the form of web services.",
+      images: [
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1628023384/DC449CCC-F237-4FA5-91AC-0EAB36717A80_u88iij.jpg",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1628023384/76D93D42-56B3-4518-81AC-9AF84E709B40_pvu80c.jpg",
+      ],
+      link: "https://www.sambalsos.com",
+    },
+    {
       name: "SambalSOS",
       type: "Web Application / PWA",
       description:
@@ -157,7 +190,7 @@ const Index = () => {
           >
             {images.map((image, index) => {
               return (
-                <SwiperSlide>
+                <SwiperSlide key={index}>
                   <a className="venobox" href={image} alt={name}>
                     <Image key={index} src={image} rounded="xl" />
                   </a>

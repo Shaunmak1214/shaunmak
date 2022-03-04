@@ -45,7 +45,7 @@ const Index = () => {
         <Text fontSize="25" fontWeight="bold">
           <CountUp
             start={0}
-            end={0.8}
+            end={1.4}
             separator="."
             decimals={1}
             duration={1}
@@ -66,7 +66,7 @@ const Index = () => {
           <Image w="30" h="30" src={SMIcons.Project} alt="Experience" />
         </Circle>
         <Text fontSize="25" fontWeight="bold">
-          <CountUp start={0} end={18} duration={1} />
+          <CountUp start={0} end={10} duration={1} />
         </Text>
         <Text>Notable Projects</Text>
       </VStack>
@@ -83,7 +83,7 @@ const Index = () => {
           <Image w="30" h="30" src={SMIcons.Github} alt="Experience" />
         </Circle>
         <Text fontSize="25" fontWeight="bold">
-          <CountUp start={0} end={86} duration={1} />
+          <CountUp start={0} end={120} duration={1} />
         </Text>
         <Text>Repositories</Text>
       </VStack>
