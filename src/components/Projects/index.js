@@ -12,6 +12,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import * as SMIcons from "../../assets";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import ReactPlayer from "react-player/youtube";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -260,9 +261,18 @@ const Index = () => {
                     alt={name}
                   >
                     {image.includes(".mp4") ? (
-                      <video width="100%" height="100%" autoplay>
-                        <source src={image} type="video/mp4" />
-                      </video>
+                      <ReactPlayer
+                        controls={false}
+                        loop={true}
+                        config={{
+                          youtube: {
+                            embedOptions: {
+                              autoplay: 1,
+                            },
+                          },
+                        }}
+                        url="https://www.youtube.com/watch?v=4J8l1OSXTD4"
+                      />
                     ) : (
                       <Image key={index} src={image} rounded="xl" />
                     )}
