@@ -39,6 +39,17 @@ const Index = () => {
   }, []);
   let projectData = [
     {
+      name: "META BUNNIES CLUB",
+      type: "NFT Smart Contract / Web Application",
+      description:
+        "Meta Bunnies Club is the first NFT collection fully crafted by hand drawing on the Ethereum blockchain.",
+      images: [
+        "https://res.cloudinary.com/shaun-storage/video/upload/v1656642774/mtbc/Screen_Recording_2022-07-01_at_10.27.44_AM_cekea8.mp4",
+        "https://res.cloudinary.com/shaun-storage/image/upload/v1656642661/mtbc/Image_01-07-2022_at_10.28_AM_frndh2.jpg",
+      ],
+      link: "https://www.metabunniesclub.com/",
+    },
+    {
       name: "Tech Career Days 2022 Resume Portal",
       type: "Web Application / Express API",
       description:
@@ -248,7 +259,13 @@ const Index = () => {
                     rel="noopener noreferrer"
                     alt={name}
                   >
-                    <Image key={index} src={image} rounded="xl" />
+                    {image.includes(".mp4") ? (
+                      <video width="100%" height="100%" autoplay>
+                        <source src={image} type="video/mp4" />
+                      </video>
+                    ) : (
+                      <Image key={index} src={image} rounded="xl" />
+                    )}
                   </a>
                 </SwiperSlide>
               );
